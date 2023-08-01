@@ -12,7 +12,7 @@ const education = [
     },
     {
         id: 2,
-        name: "RM Dhariwal Jr.Collge",
+        name: "RM Dhariwal Jr.College",
         location: "Pune shikrapur",
         field: "Class XII",
         subject: "Science",
