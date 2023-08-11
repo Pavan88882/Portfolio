@@ -208,6 +208,18 @@ const allSkills = [
         icon_name: "bxs-data",
         skill_name: "MySQL Workbench",
     },
+    {
+        id: 13,
+        category: "tools",
+        icon_name: "bxs-data",
+        skill_name: "Eclipse IDE",
+    },
+    {
+        id: 14,
+        category: "tools",
+        icon_name: "bx bxs-send",
+        skill_name: "Postman",
+    },
 ];
 
 const Skills = () => {
