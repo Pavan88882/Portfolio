@@ -135,71 +135,85 @@ import FrontendSkills from './FrontendSkills';
 import BackendSkills from './BackendSkills';
 import ToolsSkills from './ToolsSkills';
 
-const skills_left = [
+const allSkills = [
     {
         id: 1,
+        category: "backend",
         icon_name: "bx bxl-spring-boot",
         skill_name: "Spring boot",
     },
     {
         id: 2,
+        category: "backend",
         icon_name: "bx bxl-java",
         skill_name: "JAVA",
     },
     {
         id: 3,
+        category: "frontend",
         icon_name: "bxl-html5",
         skill_name: "HTML",
     },
     {
         id: 4,
+        category: "frontend",
         icon_name: "bxl-css3",
         skill_name: "CSS",
     },
     {
         id: 5,
+        category: "frontend",
         icon_name: "bxl-javascript",
         skill_name: "JAVASCRIPT",
     },
     {
         id: 6,
+        category: "backend",
         icon_name: "bxs-data",
         skill_name: "MYSQL",
     },
-];
-
-const skills_right = [
     {
-        id: 1,
+        id: 7,
+        category: "backend",
         icon_name: "bx bxl-mongodb",
         skill_name: "MongoDB",
     },
     {
-        id: 2,
+        id: 8,
+        category: "backend",
         icon_name: "bx bxl-git",
         skill_name: "GitHub",
     },
     {
-        id: 3,
+        id: 9,
+        category: "tools",
         icon_name: "bx bx-code",
         skill_name: "IntelliJ IDEA",
     },
     {
-        id: 4,
+        id: 10,
+        category: "backend",
         icon_name: "bx bx-data",
         skill_name: "Databases",
     },
     {
-        id: 5,
+        id: 11,
+        category: "tools",
         icon_name: "bx bxl-visual-studio",
         skill_name: "Visual Studio",
+    },
+    {
+        id: 12,
+        category: "tools",
+        icon_name: "bxs-data",
+        skill_name: "MySQL Workbench",
     },
 ];
 
 const Skills = () => {
-    const frontendSkills = skills_left.filter(skill => skill.id === 3 || skill.id === 4 || skill.id === 5);
-    const backendSkills = skills_right.filter(skill => skill.id === 1 || skill.id === 2 || skill.id===6 );
-    const toolsSkills = [...skills_left, ...skills_right].filter(skill => ![1,2,4,6].includes(skill.id));
+    const frontendSkills = allSkills.filter(skill => skill.category === "frontend");
+    const backendSkills = allSkills.filter(skill => skill.category === "backend");
+    const toolsSkills = allSkills.filter(skill => skill.category === "tools");
 
     return (
         <section className="skills section" id="skills">
@@ -214,3 +228,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
