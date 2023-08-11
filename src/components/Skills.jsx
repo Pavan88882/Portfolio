@@ -222,6 +222,25 @@ const allSkills = [
     },
 ];
 
+// const Skills = () => {
+//     const frontendSkills = allSkills.filter(skill => skill.category === "frontend");
+//     const backendSkills = allSkills.filter(skill => skill.category === "backend");
+//     const toolsSkills = allSkills.filter(skill => skill.category === "tools");
+
+//     return (
+//         <section className="skills section" id="skills">
+//             <h2 className="section-title">Skills</h2>
+//             <div className="skills__container bd-grid">
+//                 <FrontendSkills skills={frontendSkills} />
+//                 <BackendSkills skills={backendSkills} />
+//                 <ToolsSkills skills={toolsSkills} />
+//             </div>
+//         </section>
+//     );
+// };
+
+// export default Skills;
+
 const Skills = () => {
     const frontendSkills = allSkills.filter(skill => skill.category === "frontend");
     const backendSkills = allSkills.filter(skill => skill.category === "backend");
@@ -231,13 +250,27 @@ const Skills = () => {
         <section className="skills section" id="skills">
             <h2 className="section-title">Skills</h2>
             <div className="skills__container bd-grid">
-                <FrontendSkills skills={frontendSkills} />
-                <BackendSkills skills={backendSkills} />
-                <ToolsSkills skills={toolsSkills} />
+
+                {/* Frontend Skills */}
+                <div data-aos="zoom-in-left" data-aos-offset="100" data-aos-duration="1000">
+                    <FrontendSkills skills={frontendSkills} />
+                </div>
+
+                {/* Backend Skills */}
+                <div data-aos="zoom-in-right" data-aos-offset="100" data-aos-duration="1000">
+                    <BackendSkills skills={backendSkills} />
+                </div>
+
+                {/* Tools Skills */}
+                <div data-aos="zoom-in-left" data-aos-offset="100" data-aos-duration="1000">
+                    <ToolsSkills skills={toolsSkills} />
+                </div>
+
             </div>
         </section>
     );
 };
 
 export default Skills;
+
 
