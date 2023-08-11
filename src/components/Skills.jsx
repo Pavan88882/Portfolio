@@ -197,9 +197,9 @@ const skills_right = [
 ];
 
 const Skills = () => {
-    const frontendSkills = skills_left.filter(skill => skill.id === 4 || skill.id === 5);
-    const backendSkills = skills_right.filter(skill => skill.id === 3 || skill.id === 2);
-    const toolsSkills = [...skills_left, ...skills_right].filter(skill => ![2, 3, 4, 5].includes(skill.id));
+    const frontendSkills = skills_left.filter(skill => skill.id === 3 || skill.id === 4 || skill.id === 5);
+    const backendSkills = skills_right.filter(skill => skill.id === 1 || skill.id === 2 || skill.id===6 );
+    const toolsSkills = [...skills_left, ...skills_right].filter(skill => ![1,2,4,6].includes(skill.id));
 
     return (
         <section className="skills section" id="skills">
